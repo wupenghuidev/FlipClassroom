@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="flip_classroom"></dbname>
+    <vesion value="1"></vesion>
+    <list>
+        <mapping class="com.example.flipclassroom.db.Teacher"/>
+        <mapping class="com.example.flipclassroom.db.Student"/>
+    </list>
+</litepal>
