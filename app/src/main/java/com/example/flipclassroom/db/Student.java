@@ -9,6 +9,15 @@ import org.litepal.crud.DataSupport;
 public class Student extends DataSupport{
     private String StudengtName;
     private String PassWord;
+    private String Identity;
+
+    public String getIdentity() {
+        return Identity;
+    }
+
+    public void setIdentity(String identity) {
+        this.Identity = identity;
+    }
 
     public String getStudengtName() {
         return StudengtName;

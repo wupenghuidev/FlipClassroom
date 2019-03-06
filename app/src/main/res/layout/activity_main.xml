@@ -1,18 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.flipclassroom.MainActivity">
-
-    <TextView
+    android:orientation="vertical"
+    android:background="@drawable/background"
+tools:context="com.example.flipclassroom.MainActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="登录"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:textSize="25dp"
+    android:padding="10dp"/>
+<LinearLayout
+    android:paddingTop="60dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="30dp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    <com.example.flipclassroom.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/circleImageViewTeacher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/teacher"
+        app:border_width="2dp"
+        app:border_color="#ccc"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/Rut_Teather"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</android.support.constraint.ConstraintLayout>
+        android:text="老 师"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:background="@drawable/shape"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+    <com.example.flipclassroom.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/circleImageViewStudent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/student"
+        app:border_width="2dp"
+        app:border_color="#ccc"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/Rut_Student"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学 生"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:background="@drawable/shape"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:inputType="number"
+        android:maxLength="11"
+        android:hint="请输入手机号"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/login_icon_phone"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:hint="请输入密码"
+        android:drawableLeft="@drawable/login_icon_password" />
+    <TextView
+        android:id="@+id/tv_login"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:text="登 录"
+        android:background="@drawable/et_shape"
+        android:textColor="#ffffffff"
+        android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="快速注册"
+            android:textColor="#50065E8D"
+            android:layout_gravity="left"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:textColor="#50065E8D"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+</LinearLayout>
